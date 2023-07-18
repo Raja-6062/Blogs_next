@@ -6,46 +6,17 @@ const Errorpage = () => {
   const router = useRouter();
 
   const handleInput = () => {
-    router.push("/");
+    router.push("/blog");
   };
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
-    }, 3000);
+      router.push("/blog");
+    }, 10);
   }, []);
 
   return (
     <>
-      <nav>
-        <ul className="menu-bar">
-          <li>
-            <Link href="/">
-               Home 
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-               About 
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-               Contact 
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-               Blog 
-            </Link>
-          </li>
-          <li>
-            <Link href="/product">
-               Product 
-            </Link>
-          </li>
-        </ul>
-      </nav>
       <div id="notfound">
         <div className="notfound">
           <div className="notfound-404">
