@@ -13,7 +13,7 @@ const Errorpage = () => {
     setTimeout(() => {
       router.push("/blog");
     }, 10);
-  }, []);
+  }, [router]);
 
   return (
     <>

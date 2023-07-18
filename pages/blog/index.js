@@ -37,7 +37,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const blog = ({ blogdata }) => {
+const Blog = ({ blogdata }) => {
   const [show, setShow] = useState(false);
   const [formdata, setFormdata] = useState({
     title: "",
@@ -61,7 +61,7 @@ const blog = ({ blogdata }) => {
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + 5;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = (newArrayData.length!=0 ? newArrayData: blogdata).slice(itemOffset, endOffset);
+  const currentItems = (newArrayData.length!=0 ? newArrayData: blogdata)?.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(blogdata.length / 5);
 
   // Invoke when user click to request another page.
@@ -189,4 +189,4 @@ const blog = ({ blogdata }) => {
   );
 };
 
-export default blog;
+export default Blog;
